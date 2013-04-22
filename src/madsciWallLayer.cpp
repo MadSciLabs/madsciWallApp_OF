@@ -9,13 +9,14 @@
 #include "madsciWallLayer.h"
 
 madsciWallLayer::madsciWallLayer() {}
-madsciWallLayer::~madsciWallLayer() {}
+madsciWallLayer::~madsciWallLayer() {
+
+    cerr << "Layer Destructor" << endl;
+}
 
 madsciWallLayer::madsciWallLayer(string _name) {
 
     layer_name = _name;
-    layer_width = ofGetWidth();
-    layer_height = ofGetHeight();
 }
 
 void madsciWallLayer::setup() {}

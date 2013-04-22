@@ -5,6 +5,7 @@
 
 //Include our Layer classes
 #include "sampleLayer1.h"
+#include "sampleLayer2.h"
 
 
 class madsciWallApp : public ofBaseApp{

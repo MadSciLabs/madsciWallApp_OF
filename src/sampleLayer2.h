@@ -6,13 +6,13 @@
 //  Copyright 2013 __MyCompanyName__. All rights reserved.
 //
 
-#ifndef sampleLayer1_Header_h
-#define sampleLayer1_Header_h
+#ifndef sampleLayer2_Header_h
+#define sampleLayer2_Header_h
 
 #include "madsciWallLayer.h"
 
 //Make layers inherit WallLayer Base
-class sampleLayer1 : public madsciWallLayer {
+class sampleLayer2 : public madsciWallLayer {
     
 public:
 
@@ -20,11 +20,12 @@ public:
     int count;
     int radius;
 
-    ofPoint * arrPoints;
-
-    ~sampleLayer1();
-    sampleLayer1();
-    sampleLayer1(string _name, int _color, int _count, int _radius);
+    ofVec2f * arrLoc;
+    ofVec2f vSpeed;
+    
+    ~sampleLayer2();
+    sampleLayer2();
+    sampleLayer2(string _name, int _color, int _count, int _radius);
     
     virtual void setup();
     virtual void update();

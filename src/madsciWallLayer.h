@@ -16,11 +16,9 @@ class madsciWallLayer {
 public:
 
     string layer_name;
-    int layer_width;
-    int layer_height;
 
-    madsciWallLayer();
     ~madsciWallLayer();
+    madsciWallLayer();
     
     madsciWallLayer(string _name);
 
