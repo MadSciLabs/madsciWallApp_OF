@@ -2,6 +2,7 @@
 
 #include "ofMain.h"
 #include "madsciWallLayer.h"
+#include "ofxSpacebrew.h"
 
 //Include our Layer classes
 #include "sampleLayer1.h"
@@ -10,6 +11,11 @@
 
 class madsciWallApp : public ofBaseApp{
 	public:
+
+        string SB_HOST = "spacebrew.madsci1.havasworldwide.com"; //"sandbox.spacebrew.cc"; // change to localhost to test Spacebrew local server
+        string SB_NAME = "Wall App";
+        string SB_DESCRIPTION = "These are the wall apps Spacebrew interfaces";
+    
 		void setup();
 		void update();
 		void draw();
