@@ -97,20 +97,23 @@ void madsciWallApp::keyPressed(int key){
     }
 }
 
-void testApp::onMessage( Spacebrew::Message & msg ){
+void madsciWallApp::onMessage( Spacebrew::Message & msg ){
 
-    cerr << msg.name << " " << msg.val << endl;
+    cerr << msg.name << " " << msg.value << endl;
 
-    if ( msg.name == "switch0"){
-        setLayers(0);
-    } else if ( msg.name == "switch1"){
-        setLayers(1);
-    } else if ( msg.name == "switch2"){
-        setLayers(2);
-    } else if ( msg.name == "switch3"){
-        setLayers(3);
-    } else {
-        cout <<"Unkown Message: "<< msg << endl;
+    if (msg.value == "true")
+    {
+        if ( msg.name == "switch0"){
+            setLayers(0);
+        } else if ( msg.name == "switch1"){
+            setLayers(1);
+        } else if ( msg.name == "switch2"){
+            setLayers(2);
+        } else if ( msg.name == "switch3"){
+            setLayers(3);
+        } else {
+            cerr << "Unkown Message: "<< msg << endl;
+        }
     }
 }
 

@@ -3,6 +3,7 @@
 #include "ofMain.h"
 #include "madsciWallLayer.h"
 #include "ofxSpacebrew.h"
+#include "constants.h"
 
 //Include our Layer classes
 #include "sampleLayer1.h"
@@ -12,10 +13,6 @@
 class madsciWallApp : public ofBaseApp{
 	public:
 
-        string SB_HOST = "spacebrew.madsci1.havasworldwide.com"; //"sandbox.spacebrew.cc"; // change to localhost to test Spacebrew local server
-        string SB_NAME = "Wall App";
-        string SB_DESCRIPTION = "These are the wall apps Spacebrew interfaces";
-    
 		void setup();
 		void update();
 		void draw();
@@ -33,6 +30,10 @@ class madsciWallApp : public ofBaseApp{
         //Layer function
         void releaseLayers();
         void setLayers(int layerIndex);
+
+        //Spacebrew
+        Spacebrew::Connection spacebrew;
+        void onMessage( Spacebrew::Message & m );
 
         //Vector of Layers
         std::vector<madsciWallLayer*> vectorLayers;
